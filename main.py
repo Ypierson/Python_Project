@@ -28,19 +28,29 @@ print("Time between dates: %d days, %d hours, %d minutes and %d seconds" % (days
 
 
 today = datetime.datetime(2021,6,21)
-Friday = datetime.datetime(2021,6,16)
-print(today - Friday)
+friday = datetime.datetime(2021,6,16)
+print(today - friday)
 """
 
  today + timedelta(hours=48)
 datetime.datetimenow()
 format_timedelta(timedelta(hours=48, seconds=3700)
 
-acrs = dict(
-    last = 'row.ACRSREPORTTIMESTAMP',
-    time = 'format_timedelta'(timedelta(hours=48, seconds=3700)',
-)
+import pickle
+
+# obj0, obj1, obj2 are created here...
+
+# Saving the objects:
+with open('objs.pkl', 'w') as f:  # Python 3: open(..., 'wb')
+    pickle.dump([obj0, obj1, obj2], f)
+
+# Getting back the objects:
+with open('objs.pkl') as f:  # Python 3: open(..., 'rb')
+    obj0, obj1, obj2 = pickle.load(f)
 
 
+def my_function_with_args(today, friday):
+    print("today - friday" % (today,friday))
 
-
+    def dif_two_numbers(a, b):
+        return a - b
