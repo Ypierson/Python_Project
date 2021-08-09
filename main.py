@@ -7,17 +7,23 @@ while 1:
     row = cursor.fetchone()
     if not row:
         break
-    print(row.CRASHTIME, row.CRASHDATE)
+    print(row.ACRSREPORTTIMESTAMP, row.CRASHTIME)
     import pdb;
     pdb.set_trace()
 cnxn.close()
 
 import datetime
-"""
+
 datetime.datetime.now()
-first_time = datetime.datetime.now()
-later_time = datetime.datetime.now()
-difference = later_time - first_time
+today = datetime.datetime.now()
+delta = datetime.timedelta(hours=48)
+x = 48
+
+if x >= 48:
+print("true")
+
+"""
+difference = later_time - first_tim
 datetime.timedelta(0, 8, 562000)
 days = list()
 # Get days (without [0]!)
@@ -27,30 +33,16 @@ seconds = divmod(minutes[1], 1)               # Use remainder of minutes to calc
 print("Time between dates: %d days, %d hours, %d minutes and %d seconds" % (days[0], hours[0], minutes[0], seconds[0]))
 
 
-today = datetime.datetime(2021,6,21)
+today = datetime.datetime("ACRSREPORTTIMESTAMP")
 friday = datetime.datetime(2021,6,16)
 print(today - friday)
-"""
 
- today + timedelta(hours=48)
-datetime.datetimenow()
-format_timedelta(timedelta(hours=48, seconds=3700)
-
-import pickle
-
-# obj0, obj1, obj2 are created here...
-
-# Saving the objects:
-with open('objs.pkl', 'w') as f:  # Python 3: open(..., 'wb')
-    pickle.dump([obj0, obj1, obj2], f)
-
-# Getting back the objects:
-with open('objs.pkl') as f:  # Python 3: open(..., 'rb')
-    obj0, obj1, obj2 = pickle.load(f)
-
-
-def my_function_with_args(today, friday):
-    print("today - friday" % (today,friday))
-
-    def dif_two_numbers(a, b):
-        return a - b
+def is_timestamp_recent(timestamp_from_db, num_of_hours):
+    
+    Determine if the timestamp from the database is old enough that we need to notify
+    :param timestamp_from_db: a datetime type that comes from the database we are checking
+    :param num_of_hours: the number of hours that we expect an entry in the database, otherwise we notify
+    :return bool: True if the timestamp is recent enough that we don't need to notify, false if we should notify
+    
+    pass
+   """
