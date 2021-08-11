@@ -9,7 +9,6 @@ while 1:
         break
     print(row.ACRSREPORTTIMESTAMP, row.CRASHTIME)
     import pdb;
-    pdb.set_trace()
 cnxn.close()
 
 import datetime
@@ -20,9 +19,19 @@ delta = datetime.timedelta(hours=48)
 x = 48
 
 if x >= 48:
-print("true")
+    print("True")
+if x < 48:
+    print("False")
+"""""
+i = 48
+while i < 48:
+  print(i)
+  if i == 48:
+    break
+  i += 1
 
 """
+"""""
 difference = later_time - first_tim
 datetime.timedelta(0, 8, 562000)
 days = list()
@@ -44,5 +53,34 @@ def is_timestamp_recent(timestamp_from_db, num_of_hours):
     :param num_of_hours: the number of hours that we expect an entry in the database, otherwise we notify
     :return bool: True if the timestamp is recent enough that we don't need to notify, false if we should notify
     
-    pass
+    
+    def is_timestamp_recent(timestamp_from_db =
+     (import datetime),
+     (datetime.datetime.now()),
+     (today = datetime.datetime.now()),
+     (delta = datetime.timedelta(hours=48)),
+(x = 48),
+
+(if x >= 48:)
+    (print("True"))
+(if x < 48:)
+    (print("False"), 
+    num_of_hours
+    )
+    
+    
+    
+    def is_timestamp_recent(timestamp_from_db*
+     (import datetime)
+     (datetime.datetime.now())
+     (today = datetime.datetime.now())
+     (delta = datetime.timedelta(hours=48))
+     (x = 48),
+     num_of_hours:
+     (if x >= 48:)
+    (print("True"))
+(if x < 48:)
+    (print("False"), 
+    num_of_hours
+    )
    """
